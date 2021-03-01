@@ -1,38 +1,95 @@
-.App {
+body {
+  padding: 1%;
+}
+
+.products {
+  width:800px;
+  height:400px;
+  background: #fff;
+  border: 1px solid #C1C1C1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.card {
+  width: 250px;
+  height: 100px;
+}
+
+.card-text, .card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  font-size: smaller;
+}
+
+.card-field {
+  padding: 2px;
+}
+
+.card-img {
+  max-width: 50px;
+  max-height: 70px;
+}
+
+.filterByPrice {
+  display: flex;
+}
+
+.filterInputPrice {
+  width: 5rem;
+}
+
+.addNewProduct {
+  width: 100%;
+  /* margin-top: 2%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(209, 209, 209);
+  padding: 1%;
+}
+
+.addNewProductBtn {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filterByCurrency {
+	display: inline-block;
+	overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.filterByCurrencyItem {
+	float: left;
+	display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.filterByCurrencyItem input[type=radio] {
+	display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.filterByCurrencyItem label {
+	display: inline-block;
+	padding: 0px 15px;   
+	line-height: 34px;    
+	border: 1px solid #999;
+	border-right: none;
+	cursor: pointer;
+	user-select: none;   
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filterByCurrency .item1 label {
+	border-radius: 16px 0 0 16px;
+}
+
+.filterByCurrency .item2 label {
+	border-radius: 0 16px 16px 0;
+	border-right: 1px solid #999;
+}
+
+.filterByCurrency .filterByCurrencyItem input[type=radio]:checked + label {
+	background-color: rgb(209, 208, 208);
 }
